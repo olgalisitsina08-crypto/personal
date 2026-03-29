@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Лисицина Ольга Евгеньевна — Финансовый директор</title>
+  <meta name="description" content="Личный сайт Лисицыной Ольги Евгеньевны — финансовый директор, руководитель казначейства." />
+  <style>
+    :root{
+      --bg:#0a1020;
+      --bg-soft:#121a31;
+      --panel:rgba(255,255,255,0.08);
+      --panel-strong:rgba(255,255,255,0.12);
+      --text:#eef3ff;
+      --muted:#a7b3d1;
+      --line:rgba(255,255,255,0.12);
+      --accent:#7c3aed;
+      --accent-2:#06b6d4;
+      --accent-3:#ec4899;
+      --ok:#22c55e;
+      --shadow:0 24px 60px rgba(0,0,0,.35);
+      --radius:26px;
+      --radius-sm:18px;
+      --max:1240px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(124,58,237,.22), transparent 30%),
+        radial-gradient(circle at top right, rgba(6,182,212,.18), transparent 24%),
+        linear-gradient(180deg, #09101c 0%, #0d1428 45%, #0a1020 100%);
+      line-height:1.6;
+    }
+
+    a{color:inherit}
+    img{max-width:100%;display:block}
+
+    .container{
+      width:100%;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:20px 16px 56px;
+    }
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:20;
+      margin-bottom:18px;
+      backdrop-filter:blur(14px);
+      background:rgba(9,16,28,.55);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:20px;
+      box-shadow:0 12px 30px rgba(0,0,0,.18);
+    }
+
+    .nav-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:14px 18px;
+      flex-wrap:wrap;
+    }
+
+    .brand{
+      font-weight:800;
+      letter-spacing:-.02em;
+      font-size:16px;
+      color:#fff;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color:var(--muted);
+      font-size:14px;
+      font-weight:600;
+      transition:color .2s ease;
+    }
+
+    .nav-links a:hover{color:#fff}
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:32px;
+      padding:44px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.03)),
+        rgba(255,255,255,.03);
+      backdrop-filter:blur(16px);
+      box-shadow:var(--shadow);
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(120deg, rgba(124,58,237,.18), transparent 38%, rgba(6,182,212,.12) 72%, transparent);
+      pointer-events:none;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.4fr .8fr;
+      gap:28px;
+      align-items:center;
+      position:relative;
+      z-index:1;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.12);
+      color:#dbeafe;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin-bottom:16px;
+    }
+
+    h1{
+      margin:0 0 14px;
+      font-size:clamp(38px, 7vw, 72px);
+      line-height:.95;
+      letter-spacing:-.05em;
+      font-weight:900;
+      background:linear-gradient(90deg, rgba(255,255,255,.98), rgba(125,211,252,.95), rgba(244,114,182,.9));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      text-shadow:0 0 34px rgba(255,255,255,.08);
+    }
+
+    .lead{
+      max-width:760px;
+      color:var(--muted);
+      font-size:18px;
+      margin:0 0 26px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:28px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+      transition:transform .2s ease, opacity .2s ease, border-color .2s ease;
+    }
+
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{
+      color:#fff;
+      background:linear-gradient(90deg, var(--accent), var(--accent-2));
+      box-shadow:0 14px 28px rgba(124,58,237,.28);
+    }
+    .btn-secondary{
+      color:#e5edff;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+    }
+
+    .hero-cards{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:14px;
+    }
+
+    .mini-card{
+      padding:18px;
+      border-radius:18px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.1);
+      min-height:96px;
+    }
+
+    .mini-label{
+      display:block;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:var(--muted);
+      margin-bottom:8px;
+      font-weight:700;
+    }
+
+    .mini-value{
+      font-size:16px;
+      font-weight:700;
+      color:var(--text);
+      word-break:break-word;
+    }
+
+    .photo-wrap{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .photo-card{
+      width:min(100%, 360px);
+      padding:14px;
+      border-radius:28px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.06);
+      box-shadow:var(--shadow);
+    }
+
+    .profile-photo{
+      width:100%;
+      aspect-ratio:4 / 5;
+      object-fit:cover;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.1);
+      background:rgba(255,255,255,.04);
+    }
+
+    .photo-note{
+      margin-top:12px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .section{
+      margin-top:26px;
+      padding:30px;
+      border-radius:28px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.05);
+      box-shadow:var(--shadow);
+    }
+
+    .section-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-bottom:22px;
+    }
+
+    .section-kicker{
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--accent-2);
+      margin-bottom:6px;
+    }
+
+    .section-title{
+      margin:0;
+      font-size:clamp(24px, 4vw, 36px);
+      line-height:1.05;
+      letter-spacing:-.03em;
+      font-weight:900;
+    }
+
+    .section-subtitle{
+      color:var(--muted);
+      font-size:14px;
+      max-width:520px;
+    }
+
+    .skills-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:16px;
+    }
+
+    .skill-card{
+      position:relative;
+      overflow:hidden;
+      padding:22px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.1);
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+    }
+
+    .skill-card::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(135deg, rgba(124,58,237,.12), transparent 44%, rgba(6,182,212,.1));
+      opacity:0;
+      transition:opacity .28s ease;
+      pointer-events:none;
+    }
+
+    .skill-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 20px 40px rgba(0,0,0,.28);
+      border-color:rgba(125,211,252,.35);
+    }
+
+    .skill-card:hover::after{opacity:1}
+
+    .skill-card h3{
+      margin:0 0 10px;
+      font-size:19px;
+      font-weight:800;
+    }
+
+    .skill-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .case-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:18px;
+    }
+
+    .case{
+      position:relative;
+      overflow:hidden;
+      padding:22px 22px 22px 26px;
+      border-radius:22px;
+      border:1px solid rgba(125,211,252,.16);
+      background:
+        linear-gradient(135deg, rgba(124,58,237,.16), rgba(6,182,212,.08)),
+        rgba(255,255,255,.05);
+    }
+
+    .case::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:0;
+      bottom:0;
+      width:5px;
+      background:linear-gradient(180deg, var(--accent), var(--accent-2), var(--accent-3));
+    }
+
+    .case h4{
+      margin:0 0 10px;
+      font-size:18px;
+      font-weight:800;
+    }
+
+    .case p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .tag{
+      padding:11px 15px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.1);
+      background:rgba(255,255,255,.07);
+      color:#e6ecff;
+      font-size:14px;
+      font-weight:700;
+      transition:transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+
+    .tag:hover{
+      transform:translateY(-2px);
+      border-color:rgba(125,211,252,.34);
+      background:rgba(255,255,255,.11);
+    }
+
+    .owner-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:14px;
+    }
+
+    .owner-item{
+      padding:18px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.1);
+      background:rgba(255,255,255,.05);
+    }
+
+    .owner-item strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:15px;
+      color:#e9d5ff;
+    }
+
+    .timeline{
+      display:grid;
+      gap:18px;
+    }
+
+    .job{
+      position:relative;
+      padding:24px 24px 24px 28px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.1);
+      background:rgba(255,255,255,.05);
+    }
+
+    .job::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:18px;
+      bottom:18px;
+      width:4px;
+      border-radius:4px;
+      background:linear-gradient(180deg, var(--accent), var(--accent-2));
+    }
+
+    .job-head{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+
+    .job-title{
+      margin:0;
+      font-size:21px;
+      font-weight:800;
+    }
+
+    .job-date{
+      color:#c4b5fd;
+      font-size:14px;
+      font-weight:800;
+      white-space:nowrap;
+    }
+
+    .job-company{
+      color:#cbd5e1;
+      font-weight:700;
+      margin-bottom:12px;
+    }
+
+    .job p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .job ul{
+      margin:14px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+    }
+
+    .job li + li{margin-top:8px}
+
+    .info-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:16px;
+    }
+
+    .info-card{
+      padding:22px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,.1);
+      background:rgba(255,255,255,.06);
+    }
+
+    .info-card h4{
+      margin:0 0 10px;
+      font-size:18px;
+      font-weight:800;
+    }
+
+    .info-card p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .footer{
+      margin-top:18px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    @media (max-width: 1020px){
+      .hero-grid,
+      .skills-grid,
+      .case-grid,
+      .owner-grid,
+      .info-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 760px){
+      .container{padding:12px 12px 34px}
+      .hero,.section{padding:22px}
+      .hero-cards{grid-template-columns:1fr}
+      .nav-inner{padding:12px 14px}
+      h1{font-size:38px}
+      .lead{font-size:16px}
+      .section-title{font-size:28px}
+      .job-title{font-size:18px}
+      .profile-photo{aspect-ratio:1 / 1.15}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <nav class="nav">
+      <div class="nav-inner">
+        <div class="brand">Ольга Лисицина</div>
+        <div class="nav-links">
+          <a href="#about">Обо мне</a>
+          <a href="#skills">Навыки</a>
+          <a href="#cases">Кейсы</a>
+          <a href="#experience">Опыт</a>
+          <a href="#education">Образование</a>
+          <a href="#contacts">Контакты</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero" id="about">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Финансовый директор • Руководитель казначейства</div>
+          <h1>Лисицина Ольга Евгеньевна</h1>
+          <p class="lead">
+            Финансовый руководитель с опытом в ювелирном ритейле, банковском секторе, общепите и консалтинге. Сильная сторона — превращать сложные финансы в понятную систему управления для собственника.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:olgalisitsina08@gmail.com">Связаться</a>
+            <a class="btn btn-secondary" href="#experience">Смотреть опыт</a>
+          </div>
+
+          <div class="hero-cards" id="contacts">
+            <div class="mini-card">
+              <span class="mini-label">Проживание</span>
+              <div class="mini-value">город Тольятти<br>готова к командировкам</div>
+            </div>
+            <div class="mini-card">
+              <span class="mini-label">Телефон</span>
+              <div class="mini-value"><a href="tel:+792788917805">+7 927 8 917 805</a></div>
+            </div>
+            <div class="mini-card">
+              <span class="mini-label">Email</span>
+              <div class="mini-value"><a href="mailto:olgalisitsina08@gmail.com">olgalisitsina08@gmail.com</a></div>
+            </div>
+            <div class="mini-card">
+              <span class="mini-label">Позиция / доход</span>
+              <div class="mini-value">финансовый директор, руководитель казначейства<br>от 300 000 ₽</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-wrap">
+          <div class="photo-card">
+            <!-- Для GitHub положите фото в папку images и назовите файл photo.jpg -->
+            <img src="images/photo.jpg" alt="Лисицина Ольга Евгеньевна" class="profile-photo" />
+            <div class="photo-note">Фото загружается из репозитория GitHub: <strong>images/photo.jpg</strong></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section" id="skills">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Ключевая экспертиза</div>
+          <h2 class="section-title">Навыки</h2>
+        </div>
+        <div class="section-subtitle">
+          Управление финансами группы компаний, отчетностью, налоговой моделью, кредитованием и системой принятия решений.
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Управление ресурсами группы компаний</h3>
+          <p>Контроль финансовых потоков, приоритетов, платежей и устойчивости бизнеса на уровне группы.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Управленческая отчетность с нуля</h3>
+          <p>Построение системы отчетности, которая дает собственнику быстрые и точные ответы по бизнесу.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Управление рисками</h3>
+          <p>Кассовые разрывы, налоговые риски, финансовая устойчивость, контроль решений с учетом последствий.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Налоговое планирование</h3>
+          <p>Работа с ОСН, НДС, УСН, ПСН. Оптимизация налоговой нагрузки с контролем уровня риска.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Привлечение финансирования</h3>
+          <p>Кредиты, госпрограммы, банковские переговоры, подготовка моделей и пакета документов.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Автоматизация управленческого учета</h3>
+          <p>Мини-казначейство, управленческие модели, инструменты контроля денег и аналитики по подразделениям.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Примеры кейсов</div>
+          <h2 class="section-title">Результаты</h2>
+        </div>
+      </div>
+
+      <div class="case-grid">
+        <div class="case">
+          <h4>Мини-казначейство для группы компаний</h4>
+          <p>Создана программа управления денежными потоками, позволяющая управлять финансами группы компаний без взаимных расчетов.</p>
+        </div>
+
+        <div class="case">
+          <h4>Рост кредитного лимита с 500 тыс. до 6 млн ₽</h4>
+          <p>Подписаны кредитные соглашения с ПАО Сбербанк, снижена процентная ставка на 2 п.п., улучшены условия по эквайрингу и РКО.</p>
+        </div>
+
+        <div class="case">
+          <h4>Ускорение управленческих решений в 3 раза</h4>
+          <p>Система управленческой отчетности сократила время принятия решений по новым точкам и тендерным предложениям в три раза.</p>
+        </div>
+
+        <div class="case">
+          <h4>Проект ЧМ по футболу ФИФА</h4>
+          <p>Переговоры на английском, контракт с международным заказчиком, динамическая финансовая модель и успешная реализация проекта на Самара Арене.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Инструменты и направления</div>
+          <h2 class="section-title">Теги экспертизы</h2>
+        </div>
+      </div>
+
+      <div class="tags">
+        <span class="tag">Казначейство</span>
+        <span class="tag">Управленческая отчетность</span>
+        <span class="tag">Денежные потоки</span>
+        <span class="tag">Бюджетирование</span>
+        <span class="tag">Финансовое моделирование</span>
+        <span class="tag">Привлечение кредитов</span>
+        <span class="tag">Госпрограммы</span>
+        <span class="tag">ОСН</span>
+        <span class="tag">НДС</span>
+        <span class="tag">УСН</span>
+        <span class="tag">ПСН</span>
+        <span class="tag">ГИИС ДМДК</span>
+        <span class="tag">Маркировка остатков</span>
+        <span class="tag">Точка безубыточности</span>
+        <span class="tag">Дивиденды</span>
+        <span class="tag">Налоговое планирование</span>
+        <span class="tag">Риск-менеджмент</span>
+        <span class="tag">Маркетинговая эффективность</span>
+        <span class="tag">Переговоры на английском</span>
+        <span class="tag">Антикризисные решения</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Ценность для собственника</div>
+          <h2 class="section-title">На какие вопросы отвечаю быстро и точно</h2>
+        </div>
+      </div>
+
+      <div class="owner-grid">
+        <div class="owner-item">
+          <strong>Финансовый результат</strong>
+          По компании в целом и по отдельным направлениям бизнеса.
+        </div>
+        <div class="owner-item">
+          <strong>Доходность подразделений</strong>
+          Какая маржинальность и эффективность у каждого сегмента.
+        </div>
+        <div class="owner-item">
+          <strong>Кассовые разрывы</strong>
+          Прогноз, уровень риска и действия для предотвращения.
+        </div>
+        <div class="owner-item">
+          <strong>Точка безубыточности</strong>
+          По компании и по каждой точке продаж.
+        </div>
+        <div class="owner-item">
+          <strong>Рост стоимости компании</strong>
+          Какие факторы двигают стоимость бизнеса и где резерв роста.
+        </div>
+        <div class="owner-item">
+          <strong>Дивиденды без ущерба бизнесу</strong>
+          Сколько средств можно вывести собственнику без риска для операционной деятельности.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Профессиональный путь</div>
+          <h2 class="section-title">Опыт работы</h2>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <article class="job">
+          <div class="job-head">
+            <h3 class="job-title">Финансовый директор ювелирной компании с розничной сетью</h3>
+            <div class="job-date">март 2020 — настоящее время</div>
+          </div>
+          <div class="job-company">Ювелирный ритейл</div>
+          <p>
+            Создана система управленческой отчетности и программа управления денежными потоками — мини-казначейство. Организовано управление финансами группы компаний без взаимных расчетов. Работа с ОСН, НДС, УСН, ПСН. Спецучет: ГИИС ДМДК, организация физической маркировки остатков.
+          </p>
+          <ul>
+            <li>Привлечение кредитов, в том числе по государственным программам</li>
+            <li>Разработка ценовой политики и финансовых моделей отдельных проектов</li>
+            <li>Расчет эффективности маркетинговых акций</li>
+            <li>Системные ответы собственнику по прибыли, дивидендам, безубыточности и кассовым разрывам</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <h3 class="job-title">Заместитель директора по финансам группы компаний «Дружба»</h3>
+            <div class="job-date">май 2016 — март 2019</div>
+          </div>
+          <div class="job-company">г. Тольятти • сеть евростоловых, производство, кейтеринг</div>
+          <p>
+            Компания имела сеть городских евростоловых в трех городах Самарской области, производственную площадку полуфабрикатов и ресторан выездного обслуживания «Шеф кейтеринг».
+          </p>
+          <ul>
+            <li>Подписаны кредитные соглашения с ПАО Сбербанк</li>
+            <li>Лимит кредитования вырос с 500 тыс. до 6 млн рублей</li>
+            <li>Снижены процентная ставка, ставка эквайринга, расходы на РКО и зарплатный проект</li>
+            <li>Ликвидирована просроченная задолженность перед бюджетом, сотрудниками и поставщиками</li>
+            <li>Оптимизированы расходы на связь и закупку оборудования</li>
+            <li>Внедрены элементы системы электронного документооборота</li>
+            <li>Разработаны система скидок, мотивация менеджеров и шаблон расчета открытия новых столовых</li>
+            <li>Реализовано решение по налоговой оптимизации с понижением уровня риска</li>
+            <li>Компания вовремя перешла на работу с онлайн-кассами</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <h3 class="job-title">Руководитель проекта по участию компании в ЧМ по футболу ФИФА</h3>
+            <div class="job-date">в рамках работы в ГК «Дружба»</div>
+          </div>
+          <div class="job-company">Самара Арена</div>
+          <p>
+            Возглавляла переговоры по подписанию контракта с международным заказчиком, организовывала операционный менеджмент на стадионе: логистика, производство, сервис, работа с контролирующими органами, взаимодействие с международной командой заказчика.
+          </p>
+          <ul>
+            <li>Переговоры велись на английском языке</li>
+            <li>Подписан контракт на выгодных условиях</li>
+            <li>Создана динамическая финансовая модель при меняющихся требованиях и числе гостей</li>
+            <li>Проект успешно реализован, компания получила благодарности от ФИФА</li>
+            <li>Личное признание — знак отличия губернатора Самарской области</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <h3 class="job-title">Директор компании «Мастерская Нины Тимоховой»</h3>
+            <div class="job-date">январь 2014 — октябрь 2015</div>
+          </div>
+          <div class="job-company">г. Москва</div>
+          <p>
+            Руководство небольшой частной компанией, специализирующейся на корпоративном обучении и консалтинге. Организация мероприятий по развитию команд, переговорам и публичным выступлениям.
+          </p>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <h3 class="job-title">Директор Казначейства, член исполнительного совета, председатель комитета по управлению активами и пассивами</h3>
+            <div class="job-date">до января 2014</div>
+          </div>
+          <div class="job-company">ОАО Банк АВБ, г. Тольятти</div>
+          <p>
+            Общее руководство банком в составе коллективного исполнительного органа, управление казначейством, участие в подготовке стратегии развития и организации работы профильных комитетов.
+          </p>
+          <ul>
+            <li>Как член кредитного комитета принимала решения о кредитовании конкретных заемщиков</li>
+            <li>Понимаю логику банков при выдаче кредитов и умею готовить документы</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Образование</div>
+          <h2 class="section-title">Высшее и дополнительное образование</h2>
+        </div>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h4>Самарский государственный экономический университет</h4>
+          <p>Специальность: «Финансы и кредит»</p>
+        </div>
+
+        <div class="info-card">
+          <h4>Тольяттинская Академия управления</h4>
+          <p>2005–2006 • Профессиональная переподготовка по специальности «Управление организацией», диплом MBA</p>
+        </div>
+
+        <div class="info-card">
+          <h4>Высшая школа экономики</h4>
+          <p>2014 • Курс «Корпоративные финансы», сертификат с отличием</p>
+        </div>
+
+        <div class="info-card">
+          <h4>International Institute Business and Banking, California L.A.</h4>
+          <p>Курс «International banking», стажировка в Bank of America</p>
+        </div>
+
+        <div class="info-card">
+          <h4>Дополнительная информация</h4>
+          <p>Иностранный язык — английский. Свободное владение.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      Готово для размещения на GitHub Pages • основной файл: <strong>index.html</strong> • фото: <strong>images/photo.jpg</strong>
+    </div>
+  </div>
+</body>
+</html>

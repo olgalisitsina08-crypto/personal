@@ -1,23 +1,22 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Лисицина Ольга Евгеньевна — Финансовый директор</title>
-  <meta name="description" content="Личный сайт Лисициной Ольги Евгеньевны — финансовый директор, руководитель казначейства." />
+  <meta name="description" content="Личный сайт Лисицыной Ольги Евгеньевны — финансовый директор, руководитель казначейства." />
   <style>
     :root{
       --bg:#0a1020;
       --bg-soft:#121a31;
       --panel:rgba(255,255,255,0.08);
-      --panel-strong:rgba(255,255,255,0.12);
       --text:#eef3ff;
       --muted:#a7b3d1;
       --line:rgba(255,255,255,0.12);
       --accent:#7c3aed;
       --accent-2:#06b6d4;
       --accent-3:#ec4899;
-      --ok:#22c55e;
       --shadow:0 24px 60px rgba(0,0,0,.35);
       --radius:26px;
       --radius-sm:18px;
@@ -114,7 +113,7 @@
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1.4fr .8fr;
+      grid-template-columns:1.35fr .85fr;
       gap:28px;
       align-items:center;
       position:relative;
@@ -154,7 +153,20 @@
       max-width:760px;
       color:var(--muted);
       font-size:18px;
+      margin:0 0 18px;
+    }
+
+    .hero-points{
+      display:grid;
+      gap:8px;
       margin:0 0 26px;
+    }
+
+    .hero-points p{
+      margin:0;
+      color:#e5edff;
+      font-size:16px;
+      font-weight:600;
     }
 
     .hero-actions{
@@ -241,13 +253,6 @@
       border-radius:22px;
       border:1px solid rgba(255,255,255,.1);
       background:rgba(255,255,255,.04);
-    }
-
-    .photo-note{
-      margin-top:12px;
-      text-align:center;
-      color:var(--muted);
-      font-size:13px;
     }
 
     .section{
@@ -544,8 +549,9 @@
         <div class="brand">Ольга Лисицина</div>
         <div class="nav-links">
           <a href="#about">Обо мне</a>
+          <a href="#value">Ценность</a>
+          <a href="#results">Результаты</a>
           <a href="#skills">Навыки</a>
-          <a href="#cases">Кейсы</a>
           <a href="#experience">Опыт</a>
           <a href="#education">Образование</a>
           <a href="#contacts">Контакты</a>
@@ -553,223 +559,170 @@
       </div>
     </nav>
 
-   <!-- ЗАМЕНИ СВОЙ ТЕКУЩИЙ HERO БЛОК НА ЭТОТ -->
-<header class="hero" id="about">
-  <div class="hero-grid">
-    <div>
-      <div class="eyebrow">Финансовый директор • Руководитель казначейства</div>
-      <h1>Контроль прибыли и денег бизнеса</h1>
+    <header class="hero" id="about">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Финансовый директор • Руководитель казначейства</div>
+          <h1>Контроль прибыли и денег бизнеса</h1>
+          <p class="lead">
+            Финансовый директор, который дает собственнику прозрачную картину бизнеса и управляемость денежных потоков.
+          </p>
 
-      <p class="lead">
-        Финансовый директор, который дает собственнику прозрачную картину бизнеса и управляемость денежных потоков.
-      </p>
+          <div class="hero-points">
+            <p>— вижу реальную прибыль по бизнесу и направлениям</p>
+            <p>— прогнозирую кассовые разрывы заранее</p>
+            <p>— считаю безопасные дивиденды</p>
+          </div>
 
-      <div class="hero-points">
-        <p>— вижу реальную прибыль по бизнесу и направлениям</p>
-        <p>— прогнозирую кассовые разрывы заранее</p>
-        <p>— считаю безопасные дивиденды</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:olgalisitsina08@gmail.com">Связаться</a>
+            <a class="btn btn-secondary" href="#experience">Смотреть опыт</a>
+          </div>
+
+          <div class="hero-cards" id="contacts">
+            <div class="mini-card">
+              <span class="mini-label">Проживание</span>
+              <div class="mini-value">город Тольятти<br>готова к командировкам</div>
+            </div>
+            <div class="mini-card">
+              <span class="mini-label">Телефон</span>
+              <div class="mini-value"><a href="tel:+792788917805">+7 927 8 917 805</a></div>
+            </div>
+            <div class="mini-card">
+              <span class="mini-label">Email</span>
+              <div class="mini-value"><a href="mailto:olgalisitsina08@gmail.com">olgalisitsina08@gmail.com</a></div>
+            </div>
+            <div class="mini-card">
+              <span class="mini-label">Позиция / доход</span>
+              <div class="mini-value">финансовый директор, руководитель казначейства<br>от 300 000 ₽</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-wrap">
+          <div class="photo-card">
+            <img src="images/photo.jpg" alt="Лисицина Ольга Евгеньевна" class="profile-photo" />
+          </div>
+        </div>
       </div>
+    </header>
 
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="mailto:olgalisitsina08@gmail.com">Связаться</a>
-        <a class="btn btn-secondary" href="#experience">Смотреть опыт</a>
-      </div>
-    </div>
-
-    <div class="photo-wrap">
-      <div class="photo-card">
-        <img src="images/photo.jpg" alt="Лисицина Ольга" class="profile-photo" />
-      </div>
-    </div>
-  </div>
-</header>
-
-
-<!-- ДОБАВЬ СРАЗУ ПОСЛЕ HERO -->
-<section class="section">
-  <div class="section-header">
-    <div>
-      <div class="section-kicker">Ценность для собственника</div>
-      <h2 class="section-title">Какие ответы вы получаете</h2>
-    </div>
-  </div>
-
-  <div class="owner-grid">
-    <div class="owner-item">
-      <strong>Финансовый результат</strong>
-      Понимание прибыли по компании и направлениям
-    </div>
-    <div class="owner-item">
-      <strong>Доходность</strong>
-      Какие подразделения зарабатывают, а какие нет
-    </div>
-    <div class="owner-item">
-      <strong>Кассовые разрывы</strong>
-      Когда они будут и как их избежать
-    </div>
-    <div class="owner-item">
-      <strong>Точка безубыточности</strong>
-      По бизнесу и по каждой точке
-    </div>
-    <div class="owner-item">
-      <strong>Рост стоимости бизнеса</strong>
-      За счет чего растет или падает компания
-    </div>
-    <div class="owner-item">
-      <strong>Дивиденды</strong>
-      Сколько можно безопасно вывести
-    </div>
-  </div>
-</section>
-
-
-<!-- ДОБАВЬ БЛОК С ЦИФРАМИ -->
-<section class="section">
-  <div class="section-header">
-    <div>
-      <div class="section-kicker">Результаты</div>
-      <h2 class="section-title">Ключевые цифры</h2>
-    </div>
-  </div>
-
-  <div class="skills-grid">
-    <div class="skill-card">
-      <h3>Кредитный лимит</h3>
-      <p>рост с 0,5 до 6 млн ₽</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Снижение ставки</h3>
-      <p>-2 процентных пункта</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Скорость решений</h3>
-      <p>ускорение в 3 раза</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Задолженность</h3>
-      <p>полностью ликвидирована</p>
-    </div>
-  </div>
-</section>
-
-
-<!-- ОБНОВИ БЛОК НАВЫКОВ -->
-<section class="section" id="skills">
-  <div class="section-header">
-    <div>
-      <div class="section-kicker">Экспертиза</div>
-      <h2 class="section-title">Что это дает бизнесу</h2>
-    </div>
-  </div>
-
-  <div class="skills-grid">
-    <div class="skill-card">
-      <h3>Управленческая отчетность</h3>
-      <p>собственник видит реальную прибыль</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Казначейство</h3>
-      <p>контроль денег и отсутствие кассовых разрывов</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Налоги</h3>
-      <p>снижение нагрузки без роста рисков</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Финансирование</h3>
-      <p>доступ к кредитам на лучших условиях</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Финансовые модели</h3>
-      <p>точная оценка решений и инвестиций</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Автоматизация</h3>
-      <p>быстрая аналитика и управляемость бизнеса</p>
-    </div>
-  </div>
-</section>
-
-
-<!-- ДОБАВЬ ФИНАЛЬНЫЙ БЛОК -->
-<section class="section">
-  <div class="section-header">
-    <div>
-      <div class="section-kicker">Фокус работы</div>
-      <h2 class="section-title">Где подключаюсь</h2>
-    </div>
-  </div>
-
-  <div class="owner-grid">
-    <div class="owner-item">Построение финансовой системы</div>
-    <div class="owner-item">Выход из кассовых разрывов</div>
-    <div class="owner-item">Подготовка к масштабированию</div>
-    <div class="owner-item">Настройка управленческой отчетности</div>
-  </div>
-
-  <div style="margin-top:20px;">
-    <a class="btn btn-primary" href="mailto:olgalisitsina08@gmail.com">Связаться</a>
-  </div>
-</section>
-
-
-    <section class="section" id="skills">
+    <section class="section" id="value">
       <div class="section-header">
         <div>
-          <div class="section-kicker">Ключевая экспертиза</div>
-          <h2 class="section-title">Навыки</h2>
+          <div class="section-kicker">Ценность для собственника</div>
+          <h2 class="section-title">Какие ответы вы получаете</h2>
         </div>
-        <div class="section-subtitle">
-          Управление финансами группы компаний, отчетностью, налоговой моделью, кредитованием и системой принятия решений.
+      </div>
+
+      <div class="owner-grid">
+        <div class="owner-item">
+          <strong>Финансовый результат</strong>
+          Понимание прибыли по компании и по каждому направлению бизнеса.
+        </div>
+        <div class="owner-item">
+          <strong>Доходность подразделений</strong>
+          Какие сегменты зарабатывают, а какие снижают общую эффективность.
+        </div>
+        <div class="owner-item">
+          <strong>Кассовые разрывы</strong>
+          Когда они возникнут и какие действия их предотвратят.
+        </div>
+        <div class="owner-item">
+          <strong>Точка безубыточности</strong>
+          По компании и по каждой точке продаж.
+        </div>
+        <div class="owner-item">
+          <strong>Рост стоимости бизнеса</strong>
+          Что влияет на стоимость компании и где заложен резерв роста.
+        </div>
+        <div class="owner-item">
+          <strong>Дивиденды</strong>
+          Сколько средств можно безопасно вывести без ущерба для операционной деятельности.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Результаты</div>
+          <h2 class="section-title">Ключевые цифры</h2>
         </div>
       </div>
 
       <div class="skills-grid">
-        <article class="skill-card">
-          <h3>Управление ресурсами группы компаний</h3>
-          <p>Контроль финансовых потоков, приоритетов, платежей и устойчивости бизнеса на уровне группы.</p>
-        </article>
-
-        <article class="skill-card">
-          <h3>Управленческая отчетность с нуля</h3>
-          <p>Построение системы отчетности, которая дает собственнику быстрые и точные ответы по бизнесу.</p>
-        </article>
-
-        <article class="skill-card">
-          <h3>Управление рисками</h3>
-          <p>Кассовые разрывы, налоговые риски, финансовая устойчивость, контроль решений с учетом последствий.</p>
-        </article>
-
-        <article class="skill-card">
-          <h3>Налоговое планирование</h3>
-          <p>Работа с ОСН, НДС, УСН, ПСН. Оптимизация налоговой нагрузки с контролем уровня риска.</p>
-        </article>
-
-        <article class="skill-card">
-          <h3>Привлечение финансирования</h3>
-          <p>Кредиты, госпрограммы, банковские переговоры, подготовка моделей и пакета документов.</p>
-        </article>
-
-        <article class="skill-card">
-          <h3>Автоматизация управленческого учета</h3>
-          <p>Мини-казначейство, управленческие модели, инструменты контроля денег и аналитики по подразделениям.</p>
-        </article>
+        <div class="skill-card">
+          <h3>Кредитный лимит</h3>
+          <p>рост с 0,5 до 6 млн ₽</p>
+        </div>
+        <div class="skill-card">
+          <h3>Снижение ставки</h3>
+          <p>–2 процентных пункта</p>
+        </div>
+        <div class="skill-card">
+          <h3>Скорость решений</h3>
+          <p>ускорение в 3 раза</p>
+        </div>
+        <div class="skill-card">
+          <h3>Задолженность</h3>
+          <p>ликвидация просрочки перед бюджетом, сотрудниками и поставщиками</p>
+        </div>
+        <div class="skill-card">
+          <h3>Финансовая модель</h3>
+          <p>динамическая модель для проекта ЧМ ФИФА при меняющихся вводных</p>
+        </div>
+        <div class="skill-card">
+          <h3>Управляемость бизнеса</h3>
+          <p>собственник получает быстрые и точные ответы по деньгам и прибыли</p>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="cases">
+    <section class="section" id="skills">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Экспертиза</div>
+          <h2 class="section-title">Что это дает бизнесу</h2>
+        </div>
+        <div class="section-subtitle">
+          Не набор функций, а конкретный управленческий эффект для собственника и бизнеса.
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Управленческая отчетность</h3>
+          <p>собственник видит реальную прибыль по направлениям и принимает решения быстрее</p>
+        </div>
+        <div class="skill-card">
+          <h3>Казначейство</h3>
+          <p>контроль денежных потоков и снижение риска кассовых разрывов</p>
+        </div>
+        <div class="skill-card">
+          <h3>Налоги</h3>
+          <p>снижение налоговой нагрузки без роста рисков для бизнеса</p>
+        </div>
+        <div class="skill-card">
+          <h3>Финансирование</h3>
+          <p>доступ к кредитам и более выгодные условия банковского финансирования</p>
+        </div>
+        <div class="skill-card">
+          <h3>Финансовые модели</h3>
+          <p>точная оценка новых проектов, маркетинговых акций и управленческих решений</p>
+        </div>
+        <div class="skill-card">
+          <h3>Автоматизация</h3>
+          <p>быстрая аналитика, прозрачность данных и управляемость финансовой системы</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="section-header">
         <div>
           <div class="section-kicker">Примеры кейсов</div>
-          <h2 class="section-title">Результаты</h2>
+          <h2 class="section-title">Практические результаты</h2>
         </div>
       </div>
 
@@ -780,18 +733,18 @@
         </div>
 
         <div class="case">
-          <h4>Рост кредитного лимита с 500 тыс. до 6 млн ₽</h4>
-          <p>Подписаны кредитные соглашения с ПАО Сбербанк, снижена процентная ставка на 2 п.п., улучшены условия по эквайрингу и РКО.</p>
+          <h4>Рост кредитного лимита</h4>
+          <p>Подписаны кредитные соглашения с ПАО Сбербанк, лимит кредитования увеличен с 500 тыс. до 6 млн рублей, снижена процентная ставка.</p>
         </div>
 
         <div class="case">
-          <h4>Ускорение управленческих решений в 3 раза</h4>
-          <p>Система управленческой отчетности сократила время принятия решений по новым точкам и тендерным предложениям в три раза.</p>
+          <h4>Ускорение принятия решений</h4>
+          <p>Система управленческой отчетности сократила время принятия решений по открытию новых точек и участию в тендерах в три раза.</p>
         </div>
 
         <div class="case">
           <h4>Проект ЧМ по футболу ФИФА</h4>
-          <p>Переговоры на английском, контракт с международным заказчиком, динамическая финансовая модель и успешная реализация проекта на Самара Арене.</p>
+          <p>Переговоры на английском, выгодный контракт, динамическая финансовая модель и успешная реализация проекта на Самара Арене.</p>
         </div>
       </div>
     </section>
@@ -828,42 +781,6 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="section-header">
-        <div>
-          <div class="section-kicker">Ценность для собственника</div>
-          <h2 class="section-title">На какие вопросы отвечаю быстро и точно</h2>
-        </div>
-      </div>
-
-      <div class="owner-grid">
-        <div class="owner-item">
-          <strong>Финансовый результат</strong>
-          По компании в целом и по отдельным направлениям бизнеса.
-        </div>
-        <div class="owner-item">
-          <strong>Доходность подразделений</strong>
-          Какая маржинальность и эффективность у каждого сегмента.
-        </div>
-        <div class="owner-item">
-          <strong>Кассовые разрывы</strong>
-          Прогноз, уровень риска и действия для предотвращения.
-        </div>
-        <div class="owner-item">
-          <strong>Точка безубыточности</strong>
-          По компании и по каждой точке продаж.
-        </div>
-        <div class="owner-item">
-          <strong>Рост стоимости компании</strong>
-          Какие факторы двигают стоимость бизнеса и где резерв роста.
-        </div>
-        <div class="owner-item">
-          <strong>Дивиденды без ущерба бизнесу</strong>
-          Сколько средств можно вывести собственнику без риска для операционной деятельности.
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="experience">
       <div class="section-header">
         <div>
@@ -886,7 +803,7 @@
             <li>Привлечение кредитов, в том числе по государственным программам</li>
             <li>Разработка ценовой политики и финансовых моделей отдельных проектов</li>
             <li>Расчет эффективности маркетинговых акций</li>
-            <li>Системные ответы собственнику по прибыли, дивидендам, безубыточности и кассовым разрывам</li>
+            <li>Быстрые ответы собственнику по прибыли, дивидендам, безубыточности и кассовым разрывам</li>
           </ul>
         </article>
 
@@ -897,7 +814,7 @@
           </div>
           <div class="job-company">г. Тольятти • сеть евростоловых, производство, кейтеринг</div>
           <p>
-            Компания имела сеть городских евростоловых в трех городах Самарской области, производственную площадку полуфабрикатов и ресторан выездного обслуживания «Шеф кейтеринг».
+            Работа с кредитованием, платежными потоками, управленческой отчетностью, налоговой моделью и финансовой устойчивостью бизнеса.
           </p>
           <ul>
             <li>Подписаны кредитные соглашения с ПАО Сбербанк</li>
@@ -905,9 +822,9 @@
             <li>Снижены процентная ставка, ставка эквайринга, расходы на РКО и зарплатный проект</li>
             <li>Ликвидирована просроченная задолженность перед бюджетом, сотрудниками и поставщиками</li>
             <li>Оптимизированы расходы на связь и закупку оборудования</li>
-            <li>Внедрены элементы системы электронного документооборота</li>
+            <li>Внедрены элементы электронного документооборота</li>
             <li>Разработаны система скидок, мотивация менеджеров и шаблон расчета открытия новых столовых</li>
-            <li>Реализовано решение по налоговой оптимизации с понижением уровня риска</li>
+            <li>Реализовано налоговое решение с понижением уровня риска</li>
             <li>Компания вовремя перешла на работу с онлайн-кассами</li>
           </ul>
         </article>
@@ -937,7 +854,7 @@
           </div>
           <div class="job-company">г. Москва</div>
           <p>
-            Руководство небольшой частной компанией, специализирующейся на корпоративном обучении и консалтинге. Организация мероприятий по развитию команд, переговорам и публичным выступлениям.
+            Руководство компанией в сфере корпоративного обучения и консалтинга. Организация мероприятий по развитию команд, переговорам и публичным выступлениям.
           </p>
         </article>
 
@@ -994,7 +911,30 @@
       </div>
     </section>
 
-   
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Фокус работы</div>
+          <h2 class="section-title">Где подключаюсь</h2>
+        </div>
+      </div>
+
+      <div class="owner-grid">
+        <div class="owner-item">Построение финансовой системы</div>
+        <div class="owner-item">Выход из кассовых разрывов</div>
+        <div class="owner-item">Подготовка к масштабированию</div>
+        <div class="owner-item">Настройка управленческой отчетности</div>
+      </div>
+
+      <div style="margin-top:20px;">
+        <a class="btn btn-primary" href="mailto:olgalisitsina08@gmail.com">Связаться</a>
+      </div>
+    </section>
+
+    <div class="footer">
+      Личный сайт Лисицыной Ольги Евгеньевны
+    </div>
   </div>
 </body>
 </html>
+```
